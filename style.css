@@ -1,21 +1,36 @@
-.wrapper
-{
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+}
+
+.wrapper {
     display: flex;
     justify-content: center;
     min-width: 100%;
     min-height: 100%;
 }
 
-.container
-{
+.container {
+    box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
     align-items: center;
     display: flex;
+    min-height: 100%;
+    min-width: 100%;
     justify-content: center;
     flex-direction: column;
 }
 
-.text
-{
+.test__text {
     flex-direction: row;
     display: flex;
     align-items: center;
@@ -24,22 +39,18 @@
     align-content: flex-start;
 }
 
- .katex {
-     font-size: 0.9em;
- }
-
-.answers
-{
-    display: flex;
-    width: 500px;
-    min-height: 100px;
-    border: 5px black;
-    width: fit-content;
-    border: solid;
+.katex {
+    font-size: 0.9em;
 }
 
-.answer__block
-{
+.test__answers {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.test__answer__block {
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -49,30 +60,28 @@
     border: solid 0.5px black;
 }
 
-.answer__block__radio
-{
+.test__answer__block__radio {
     margin-bottom: 5px;
 }
 
-.answer__block__item
-{
+.test__answer__block__item {
     height: 50px;
     display: flex;
     align-items: center;
 }
 
-.buttons
-{
+.test__buttons {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .btn {
     display: inline-block;
     box-sizing: border-box;
     padding: 15px;
-    margin: 30px;
-    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     outline: none;
     border: 1px solid rgb(222, 220, 220);
     border-radius: 50px;
@@ -111,4 +120,24 @@
     border-color: #eee;
     color: #444;
     cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .test__answer__block
+    {
+        margin: 10px;
+        width: 50%;
+    }
+    .test__answers
+    {
+        border: none;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .test__text
+    {
+        padding: 20px;
+        justify-content: space-evenly;
+    }
 }
