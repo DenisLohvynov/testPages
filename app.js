@@ -4,3 +4,8 @@ tg.expand();
 
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
+
+tg.BackButton.show();
+
+tg.MainButton.setText("ТЕкст ектс");
+tg.MainButton.show();
